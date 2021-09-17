@@ -1,0 +1,14 @@
+message = "input some word \n"
+prompt = input(message)
+
+if len(prompt) != 5:
+    print(f"{prompt} is different from target chars long")
+    if len(prompt) < 5:
+        temp = len(prompt)
+        print(f"{prompt} is smaller than 5 chars and is {temp} chars long")
+    elif len(prompt) >5:
+        temp1 = len(prompt)
+        print(f"{prompt} is bigger than 5 chars and is {temp1} chars long")
+
+else:
+    print(f"{prompt} is 5 chars long")
