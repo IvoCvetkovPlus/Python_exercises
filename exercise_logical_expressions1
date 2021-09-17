@@ -1,0 +1,26 @@
+print(x1)
+x2 = ("good" != "bad")
+print(x2)
+
+("A" != "A") or not (2 >= 3)
+# false               false
+# false    or      true
+# true
+print("----------------------------------")
+x3 = (1 <= 1) and (1 != 1) #false
+y1 = not (1 != 2)   #false
+y2 = ("good" != "bad") or False #true
+y3 = ("good" != "Good") and not (1 == 1) #false
+print(x3)
+print(y1)
+print(y2)
+print(y3)
+print("----------------------------------")
+t1 = False == (not True) # true
+t2 = (True and False) == (True and False) # true
+t3 = (not True) and "A" == "B" # false
+t4 = "B" and (not "A" != "B") # false
+print(t1)
+print(t2)
+print(t3)
+print(t4)
