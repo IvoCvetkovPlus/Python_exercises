@@ -1,0 +1,33 @@
+prompt ="input h \n"
+prompt1 ="input w \n"
+n = int(input(prompt))
+h = int(input(prompt1))
+x = "*"
+y = "/"
+z = "\\"
+for b in range(h):
+
+    for i in range(n+2):
+        if i<n/2-1:
+           print(x,end=" ")
+        if i>n/2 and i <n/2+2:
+           print(z,end=" ")
+        if i>n/2+2 and i<n/2+4:
+            print(y, end=" ")
+        if i>n/2+2:
+            print(x,end=" ")
+    print()
+for b in range(h):
+    for i in range(n+2):
+        if i<n/2-1:
+           print(x,end=" ")
+        if i>n/2 and i <n/2+2:
+           print(y,end=" ")
+
+        if i>n/2+2 and i<n/2+4:
+            print(z, end=" ")
+
+        if i>n/2+2:
+            print(x,end=" ")
+
+    print()
