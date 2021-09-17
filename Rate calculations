@@ -1,0 +1,22 @@
+# -------------------------------------
+# Created by Ivo Cvetkov
+# -------------------------------------
+
+message1 = "enter initual amount of money\n"
+message2 = "enter expected rate in range 0 - 100% \n"
+message3 = "enter for how many years \n"
+
+money = float(input(message1))
+percentage = float(input(message2))
+period = int(input(message3))
+
+def return_money(sum,rate,years):
+
+    for x in range(years):
+        sum = sum
+        year = x+1
+        print(f"in year {year} sum will be {sum:,.2f}")
+        profit = sum*rate/100
+        sum = sum+profit
+
+return_money(money,percentage,period)
