@@ -1,0 +1,17 @@
+import random
+
+h = 0
+t = 0
+
+def coin_flip(tails):
+    if random.random()< tails:
+        return "heads"
+    else:
+        return "tails"
+
+for i in range(10000):
+    if coin_flip(.7) == "heads":
+        h +=1
+    else:
+        t +=1
+print(f"heads are {h} and tails are {t}")
