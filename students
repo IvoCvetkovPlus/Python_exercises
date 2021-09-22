@@ -1,0 +1,43 @@
+universities = [
+['California Institute of Technology', 2175, 37704],
+['Harvard', 19627, 39849],
+['Massachusetts Institute of Technology', 10566, 40732],
+['Princeton', 7802, 37000],
+['Rice', 5879, 35551],
+['Stanford', 19535, 40569],
+['Yale', 11701, 40500]
+]
+students_number = []
+total_sum = []
+def en_stats(total_list):
+
+      for x in range (len(total_list)):
+          students_number.append(total_list[x][1])
+          total_sum.append(total_list[x][2])
+      return students_number, total_sum
+
+
+en_stats(universities)
+print(f"list test - students numbers",students_number)
+print(f"list test - students fees",total_sum)
+
+def sum_students():
+    x = sum(students_number)
+    return x
+
+def mean():
+    mean = sum_students()/len(universities)
+    return mean
+
+students_number.sort()
+total_sum.sort()
+median = students_number[3]
+Money_mean = sum(total_sum)/7
+money_median = total_sum[3]
+
+print(f"Total students:  {sum_students():,} ")
+print(f"Total tuition is:   {sum(total_sum):,.0f}")
+print(f"Student mean:   {mean():,.0f}")
+print("Student median is : ",median)
+print(f"Tuition mean is: {Money_mean:,.2f}")
+print(f"Tuition median is: {money_median:,.0f}")
