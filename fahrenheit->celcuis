@@ -1,0 +1,55 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Oct 12 14:35:24 2021
+
+@author: user
+"""
+
+
+import tkinter as tk
+
+def convert():
+    fahr=entry_C.get()
+    celsuis = ((float(fahr)) - 32)*(5/9) 
+    label['text'] = (f"C={celsuis:.1f}")
+
+def convert1(event):
+    fahr=entry_C.get()
+    celsuis = ((float(fahr)) - 32)*(5/9) 
+    label['text'] = (f"C={celsuis:.1f}")
+    entry_C.delete(0,tk.END)
+        
+    
+
+
+window = tk.Tk()
+window.title("Temperature converter")
+
+window.rowconfigure(0,minsize=40,weight=1)
+window.columnconfigure([0,1,2,3],minsize=70,weight=1)
+
+frame1=tk.Frame(master=window,height=20,width=20,bg='blue')
+frame1.grid(row=0,column=0,sticky='nwse')
+
+entry_C = tk.Entry(master=frame1,relief=tk.SUNKEN,borderwidth=1,width=10)
+entry_C.pack(padx=10, pady=10)
+entry_C.bind("<Return>",convert1)
+
+frame2=tk.Frame(master=window,height=20,width=10,bg='yellow')
+frame2.grid(row=0,column=1,sticky='nwse')
+fr2_label=tk.Label(master=frame2,width=5,text="F",bg='grey',fg="white")
+fr2_label.pack(padx=10,pady=10)
+
+frame3=tk.Frame(master=window,bg='green')
+frame3.grid(row=0,column=2,sticky='nwse')
+
+button = tk.Button(master=frame3,text='Convert',relief=tk.RAISED,
+                   borderwidth=6,command=convert)
+button.pack(padx=10,pady=10,)
+
+frame4=tk.Frame(master=window,bg='grey')
+frame4.grid(row=0,column=3,sticky='nwse')
+
+label=tk.Label(master=frame4,text='C =',bg='grey',fg='white')
+label.pack(pady=10)
+window.mainloop()
